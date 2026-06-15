@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 from tkinter import filedialog
+from pdf_report import generate_pdf_report
+from dashboard import get_dashboard_stats
 
 from interview_engine import (
     get_questions,
@@ -175,6 +177,15 @@ def next_question():
             score
         )
 
+        generate_pdf_report(
+            candidate_name,
+            domain,
+            score,
+            feedback,
+            current_questions,
+            answers
+        )
+
         question_label.config(
             text="Interview Completed!"
         )
@@ -187,7 +198,8 @@ def next_question():
             "Interview Result",
             f"Interview Completed!\n\n"
             f"Score: {score}/100\n\n"
-            f"{feedback}"
+            f"{feedback}\n\n"
+            f"TXT, CSV and PDF Reports Generated Successfully!"
         )
 
         return
@@ -199,6 +211,21 @@ def next_question():
     counter_label.config(
         text=f"Question {current_index + 1}/{len(current_questions)}"
     )
+
+
+def show_dashboard():
+
+    stats = get_dashboard_stats()
+
+    messagebox.showinfo(
+        "Interview Dashboard",
+        f"Total Interviews: {stats['total']}\n\n"
+        f"Average Score: {stats['average']}\n\n"
+        f"Highest Score: {stats['highest']}\n\n"
+        f"Lowest Score: {stats['lowest']}"
+    )
+    
+
 
 # -------------------------
 # GUI
@@ -292,6 +319,17 @@ start_btn = tk.Button(
 
 start_btn.pack(
     pady=20
+)
+
+dashboard_btn = tk.Button(
+    root,
+    text="Dashboard",
+    width=20,
+    command=show_dashboard
+)
+
+dashboard_btn.pack(
+    pady=5
 )
 
 question_label = tk.Label(

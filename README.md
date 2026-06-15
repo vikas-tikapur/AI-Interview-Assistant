@@ -1,50 +1,62 @@
 # AI Interview Assistant
 
-A Python-based AI Interview Simulator that helps candidates practice technical interviews, evaluate performance, and generate feedback reports.
+A Python-based AI Interview Assistant built using Tkinter.
 
 ## Features
 
-- Domain-based interview questions
-- Python, AI/ML, and Computer Vision domains
-- Candidate answer recording
-- Automatic score calculation
-- AI feedback generation
-- TXT report export
-- CSV result tracking
-- Simple Tkinter GUI
+- Resume Upload (PDF / DOCX)
+- Automatic Skill Extraction
+- Resume-Based Interview Questions
+- Domain-Based Questions
+- Score Calculation
+- Performance Feedback
+- TXT Report Generation
+- CSV Report Generation
+- PDF Report Generation
+- Dashboard Analytics
 
 ## Technologies Used
 
 - Python
 - Tkinter
-- JSON
-- CSV
-- File Handling
+- Pandas
+- ReportLab
+- PyPDF2
+- Python-docx
 
 ## Project Structure
 
 AI-Interview-Assistant/
+
 ├── main.py
+
 ├── interview_engine.py
+
 ├── score_manager.py
+
+├── resume_parser.py
+
+├── pdf_report.py
+
+├── dashboard.py
+
 ├── questions.json
-├── README.md
-└── .gitignore
 
-## How to Run
+├── requirements.txt
 
-```bash
+└── results/
+
+## How To Run
+
+1. Install dependencies
+
+pip install -r requirements.txt
+
+2. Run project
+
 python main.py
-```
-
-## Future Enhancements
-
-- Resume Upload
-- Resume Skill Extraction
-- Resume-Based Questions
-- Voice Interview
-- PDF Report Generation
 
 ## Author
 
 Vikas Mishra
+Python | AI | ML Developer
