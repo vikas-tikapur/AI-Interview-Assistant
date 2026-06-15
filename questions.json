@@ -1,0 +1,25 @@
+{
+    "Python": [
+        "What is a list in Python?",
+        "What is OOP?",
+        "Difference between List and Tuple?",
+        "What is a dictionary?",
+        "What is inheritance?"
+    ],
+
+    "AI_ML": [
+        "What is Machine Learning?",
+        "Difference between AI and ML?",
+        "What is Deep Learning?",
+        "What is supervised learning?",
+        "What is overfitting?"
+    ],
+
+    "Computer_Vision": [
+        "What is OpenCV?",
+        "What is YOLO?",
+        "What is Image Processing?",
+        "What is object detection?",
+        "What is face recognition?"
+    ]
+}
